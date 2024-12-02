@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="styleCheckout.css">
+</head>
+<body>
+    <div class="checkout-container">
+        <header>
+            <h1>Checkout</h1>
+        </header>
+
+        <section class="cart-summary">
+            <h2>Your Cart</h2>
+            <div id="cart-summary"></div>
+        </section>
+
+        <section class="payment-method">
+            <h3>Select Payment Method</h3>
+            <form id="payment-form">
+                <label for="payment-method">Choose Payment Method:</label>
+                <select id="payment-method" required>
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">MasterCard</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+
+                <div id="visa-info" class="payment-method-info">
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" placeholder="Enter card number" required>
+
+                    <label for="expiry-date">Expiry Date:</label>
+                    <input type="text" id="expiry-date" placeholder="MM/YY" required>
+
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" placeholder="Enter CVV" required>
+                </div>
+
+                <div id="paypal-info" class="payment-method-info">
+                    <p>Log in to PayPal to complete your payment.</p>
+                    <button type="button" id="paypal-login">Log in to PayPal</button>
+                </div>
+
+                <button type="submit" id="submit-order">Complete Order</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="checkoutScript.js"></script>
+</body>
+</html>
